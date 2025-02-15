@@ -15,14 +15,14 @@ const Navbar = () => {
         <
         Heart className = "h-8 w-8 text-white" / >
         <
-        span className = "ml-2 text-xl font-bold" > HerCare < /span> <
-        /div>
+        span className = "ml-2 text-xl font-bold" > HerCare < /span> < /
+        div >
 
         { /* Desktop Menu */ } <
         div className = "hidden md:flex items-center space-x-6" > {
             [
                 { to: "/", text: "Home" },
-                { to: "/about", text: "About Us" },
+                { to: "#about-us", text: "About Us" },
                 { to: "/tracker", text: "Cycle Tracker" },
                 { to: "/ai-health", text: "AI Health Guide" },
                 { to: "/consult-gynaec", text: "Consult a Gynaecologist" },
@@ -31,8 +31,7 @@ const Navbar = () => {
             ].map((link) => ( <
                 Link key = { link.to }
                 to = { link.to }
-                className = "text-white hover:underline transition duration-300" >
-                { link.text } <
+                className = "text-white hover:underline transition duration-300" > { link.text } <
                 /Link>
             ))
         } <
@@ -42,9 +41,10 @@ const Navbar = () => {
         div className = "md:hidden" >
         <
         button onClick = {
-            () => setIsOpen(!isOpen) } > { isOpen ? < X className = "h-8 w-8 text-white" / > : < Menu className = "h-8 w-8 text-white" / > } <
-        /button> <
-        /div> <
+            () => setIsOpen(!isOpen)
+        } > { isOpen ? < X className = "h-8 w-8 text-white" / > : < Menu className = "h-8 w-8 text-white" / > } <
+        /button> < /
+        div > <
         /div>
 
         { /* Mobile Menu */ } {
@@ -52,7 +52,7 @@ const Navbar = () => {
                 div className = "md:hidden bg-purple-600 text-white p-4 space-y-4" > {
                     [
                         { to: "/", text: "Home" },
-                        { to: "/about", text: "About Us" },
+                        { to: "#about-us", text: "About Us" },
                         { to: "/tracker", text: "Cycle Tracker" },
                         { to: "/ai-health", text: "AI Health Guide" },
                         { to: "/consult-gynaec", text: "Consult a Gynaecologist" },
@@ -63,16 +63,16 @@ const Navbar = () => {
                         to = { link.to }
                         className = "block text-white hover:bg-pink-500 p-2 rounded-md"
                         onClick = {
-                            () => setIsOpen(false) } >
-                        { link.text } <
+                            () => setIsOpen(false)
+                        } > { link.text } <
                         /Link>
                     ))
                 } <
                 /div>
             )
         } <
-        /div> <
-        /nav>
+        /div> < /
+        nav >
     );
 };
 

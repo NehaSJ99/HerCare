@@ -52,7 +52,7 @@ const Hero = () => {
         <
         img src = { HeroImage }
         alt = "Health Tracking"
-        className = "w-full rounded-lg shadow-lg" / >
+        className = "w-full" / >
         <
         /div>
 

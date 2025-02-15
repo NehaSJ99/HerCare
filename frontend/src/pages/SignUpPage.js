@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { Mail, Lock, User, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
 const InputField = ({ icon: Icon, type, placeholder, value, onChange, error }) => {
         return ( <
@@ -28,6 +30,7 @@ const InputField = ({ icon: Icon, type, placeholder, value, onChange, error }) =
         const SignUpPage = () => {
             const [formData, setFormData] = useState({ name: "", email: "", password: "" });
             const [errors, setErrors] = useState({});
+            const navigate = useNavigate();
 
             const validate = () => {
                 let tempErrors = {};
@@ -41,10 +44,15 @@ const InputField = ({ icon: Icon, type, placeholder, value, onChange, error }) =
                 return Object.keys(tempErrors).length === 0;
             };
 
-            const handleSubmit = (e) => {
+            const handleSubmit = async (e) => {
                 e.preventDefault();
-                if (validate()) {
-                    console.log("Form submitted:", formData);
+                
+                try {
+                    const response = await axios.post("http://localhost:5000/api/users/signup", formData);
+                    alert(response.data.message);
+                    navigate(response.data.redirect);
+                } catch (error) {
+                    alert(error.response.data.error);
                 }
             };
 

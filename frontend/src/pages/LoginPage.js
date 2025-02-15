@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { Mail, Lock, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
 const InputField = ({ icon: Icon, type, placeholder, value, onChange, error }) => {
         return ( <
@@ -27,6 +29,7 @@ const InputField = ({ icon: Icon, type, placeholder, value, onChange, error }) =
 
         const LoginPage = () => {
                 const [formData, setFormData] = useState({ email: "", password: "" });
+                const navigate = useNavigate();
                 const [errors, setErrors] = useState({});
                 const [loginError, setLoginError] = useState("");
 
@@ -40,19 +43,15 @@ const InputField = ({ icon: Icon, type, placeholder, value, onChange, error }) =
                     return Object.keys(tempErrors).length === 0;
                 };
 
-                const handleSubmit = (e) => {
+                const handleSubmit = async (e) => {
                     e.preventDefault();
-                    if (!validate()) return;
-
-                    // Simulated authentication (Replace with actual API call)
-                    const mockUser = { email: "test@example.com", password: "password123" };
-
-                    if (formData.email === mockUser.email && formData.password === mockUser.password) {
-                        console.log("Login successful!");
-                        setLoginError("");
-                        // Redirect to dashboard or homepage (replace with actual navigation logic)
-                    } else {
-                        setLoginError("Invalid email or password");
+                    
+                    try {
+                        const response = await axios.post("http://localhost:5000/api/users/login", formData);
+                        alert(response.data.message);
+                        navigate(response.data.redirect);
+                    } catch (error) {
+                        alert(error.response.data.error);
                     }
                 };
 

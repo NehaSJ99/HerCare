@@ -32,38 +32,22 @@ function calculatePredictions(startDate, endDate, avgCycleLength) {
 
 exports.logPeriod = async (req, res) => {
   try {
-    // For demo, userId = 1 (in real app, get from auth)
-    const userId = 1;
-
-    const { startDate, endDate, averageCycleLength } = req.body;
-
-    // Insert user data into DB
-    await insertCycle(userId, startDate, endDate, averageCycleLength);
-
-    // Calculate predictions
-    const predictions = calculatePredictions(startDate, endDate, averageCycleLength);
-
-    // Get updated list of all user periods
-    const allPeriods = await getUserCycles(userId);
-
-    return res.status(201).json({
-      predictions,
-      allPeriods,
-    });
+      const { userId, startDate, endDate, averageCycleLength } = req.body;
+      const cycle = await insertCycle(userId, startDate, endDate, averageCycleLength);
+      res.status(201).json(cycle);
   } catch (error) {
-    console.error('Error logging period:', error);
-    return res.status(500).json({ error: 'Failed to log period data' });
+      console.error(error);
+      res.status(500).json({ error: 'Failed to log period data' });
   }
 };
 
 exports.getPeriods = async (req, res) => {
   try {
-    const userId = 1; // For demo
-    const allPeriods = await getUserCycles(userId);
-
-    return res.status(200).json({ allPeriods });
+      const { userId } = req.query;
+      const cycles = await getUserCycles(userId);
+      res.status(200).json(cycles);
   } catch (error) {
-    console.error('Error fetching periods:', error);
-    return res.status(500).json({ error: 'Failed to fetch period data' });
+      console.error(error);
+      res.status(500).json({ error: 'Failed to fetch period data' });
   }
 };

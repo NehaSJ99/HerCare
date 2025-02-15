@@ -1,30 +1,102 @@
-import React from "react";
+import React, { useState } from "react";
+import { Mail, Lock, User, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
-const SignUpPage = () => {
-    return ( <
-        div className = "min-h-screen flex items-center justify-center bg-gray-100" >
-        <
-        div className = "bg-white p-8 rounded-lg shadow-lg w-96" >
-        <
-        h2 className = "text-2xl font-bold mb-6 text-center" > Create an Account < /h2> <
-        input type = "text"
-        placeholder = "Full Name"
-        className = "w-full p-2 border rounded mb-4" / >
-        <
-        input type = "email"
-        placeholder = "Email"
-        className = "w-full p-2 border rounded mb-4" / >
-        <
-        input type = "password"
-        placeholder = "Password"
-        className = "w-full p-2 border rounded mb-4" / >
-        <
-        button className = "w-full bg-pink-500 text-white p-2 rounded hover:bg-pink-600" >
-        Sign Up <
-        /button> <
-        /div> <
-        /div>
-    );
-};
+const InputField = ({ icon: Icon, type, placeholder, value, onChange, error }) => {
+        return ( <
+            div className = "space-y-1" >
+            <
+            div className = "relative" >
+            <
+            div className = "absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none" >
+            <
+            Icon className = "h-5 w-5 text-gray-400" / >
+            <
+            /div> <
+            input type = { type }
+            className = "block w-full pl-10 py-3 border border-gray-300 rounded-lg focus:ring-pink-500 focus:border-pink-500"
+            placeholder = { placeholder }
+            value = { value }
+            onChange = { onChange }
+            /> <
+            /div> {
+                error && < p className = "text-red-500 text-xs mt-1" > { error } < /p>} <
+                    /div>
+            );
+        };
 
-export default SignUpPage;
+        const SignUpPage = () => {
+            const [formData, setFormData] = useState({ name: "", email: "", password: "" });
+            const [errors, setErrors] = useState({});
+
+            const validate = () => {
+                let tempErrors = {};
+                if (!formData.name) tempErrors.name = "Full Name is required";
+                if (!formData.email) tempErrors.email = "Email is required";
+                else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) tempErrors.email = "Invalid email format";
+                if (!formData.password) tempErrors.password = "Password is required";
+                else if (formData.password.length < 6) tempErrors.password = "Password must be at least 6 characters";
+
+                setErrors(tempErrors);
+                return Object.keys(tempErrors).length === 0;
+            };
+
+            const handleSubmit = (e) => {
+                e.preventDefault();
+                if (validate()) {
+                    console.log("Form submitted:", formData);
+                }
+            };
+
+            return ( <
+                div className = "min-h-screen flex items-center justify-center bg-gradient-to-r from-pink-50 via-purple-50 to-white" >
+                <
+                div className = "bg-white p-8 rounded-xl shadow-xl w-96" >
+                <
+                h2 className = "text-3xl font-bold text-center text-gray-900 mb-6" >
+                Create an Account <
+                /h2> <
+                form onSubmit = { handleSubmit }
+                className = "space-y-6" >
+                <
+                InputField icon = { User }
+                type = "text"
+                placeholder = "Full Name"
+                value = { formData.name }
+                onChange = {
+                    (e) => setFormData({...formData, name: e.target.value }) }
+                error = { errors.name }
+                /> <
+                InputField icon = { Mail }
+                type = "email"
+                placeholder = "Email address"
+                value = { formData.email }
+                onChange = {
+                    (e) => setFormData({...formData, email: e.target.value }) }
+                error = { errors.email }
+                /> <
+                InputField icon = { Lock }
+                type = "password"
+                placeholder = "Password"
+                value = { formData.password }
+                onChange = {
+                    (e) => setFormData({...formData, password: e.target.value }) }
+                error = { errors.password }
+                /> <
+                button type = "submit"
+                className = "w-full bg-gradient-to-r from-pink-500 to-purple-500 text-white p-3 rounded-lg hover:scale-105 transition-all flex items-center justify-center" >
+                Sign Up <
+                ArrowRight className = "ml-2 h-5 w-5" / >
+                <
+                /button> <
+                /form> <
+                p className = "text-center text-sm text-gray-600 mt-4" >
+                Already a member ? < Link to = "/login"
+                className = "underline text-pink-500" > Login < /Link> <
+                /p> <
+                /div> <
+                /div>
+            );
+        };
+
+        export default SignUpPage;

@@ -55,12 +55,13 @@ const PeriodCalendar = ({ periodDataList = [], predictions }) => {
         <div
           style={{
             marginTop: '2px',
-            height: '8px',
-            width: '8px',
+            height: '12px',
+            width: '12px',
             borderRadius: '50%',
-            backgroundColor: 'red',
+            backgroundColor: '#ff4d4d', // Light red for past periods
             marginLeft: 'auto',
             marginRight: 'auto',
+            boxShadow: '0 2px 8px rgba(0, 0, 0, 0.2)', // Add shadow for depth
           }}
         />
       );
@@ -71,10 +72,11 @@ const PeriodCalendar = ({ periodDataList = [], predictions }) => {
       return (
         <div
           style={{
-            fontSize: '16px',
+            fontSize: '18px',
             fontWeight: 'bold',
-            color: 'red',
+            color: '#ff4d4d',
             textAlign: 'center',
+            transform: 'scale(1.4)',
           }}
         >
           X
@@ -82,18 +84,20 @@ const PeriodCalendar = ({ periodDataList = [], predictions }) => {
       );
     }
 
-    // Green dot for fertile window
+    // Green dot for fertile window with grass-like appearance
     if (fertileWindowDays.has(dateStr)) {
       return (
         <div
           style={{
             marginTop: '2px',
-            height: '8px',
-            width: '8px',
+            height: '12px',
+            width: '12px',
             borderRadius: '50%',
-            backgroundColor: 'green',
+            backgroundColor: '#4CAF50', // Green for fertile window
             marginLeft: 'auto',
             marginRight: 'auto',
+            border: '2px solid #388E3C', // Grass border for fertility
+            boxShadow: '0 4px 8px rgba(0, 0, 0, 0.3)', // Soft shadow for green dot
           }}
         />
       );
@@ -103,13 +107,17 @@ const PeriodCalendar = ({ periodDataList = [], predictions }) => {
   };
 
   return (
-    <div className="bg-white p-4 rounded shadow">
-      <h2 className="text-xl font-bold mb-2">Calendar</h2>
+    <div className="bg-white p-8 rounded-lg shadow-xl max-w-md mx-auto space-y-6 border-2 border-gray-300 mt-10">
+      <h2 className="text-2xl font-semibold text-center text-pink-600 mt-4">Period Calendar</h2>
       <Calendar
         onChange={setValue}
         value={value}
         tileContent={tileContent}
+        className="rounded-lg border-2 border-pink-400 shadow-lg hover:shadow-xl transition-shadow duration-300 mt-6 bg-pink-100"
       />
+      <div className="text-center text-gray-500 text-sm mt-6">
+        <p>Track your menstrual cycle, ovulation, and fertile windows easily!</p>
+      </div>
     </div>
   );
 };

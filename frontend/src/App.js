@@ -6,21 +6,38 @@ import LoginPage from "./pages/LoginPage";
 import SignUpPage from "./pages/SignUpPage";
 import PeriodTrackerPage from "./pages/PeriodTrackerPage";
 import ConsultGynaecPage from "./pages/ConsultGynaecPage";
+import Dashboard from "./pages/Dashboard";
 import './styles/tailwind.css';
 
 
 function App() {
-    return ( 
-        <Router >
-        <Navbar />
-            <Routes >
-                <Route path = "/"   element = { < HomePage / > }/> 
-                <Route path = "/login" element = { < LoginPage / > }/> 
-                <Route path = "/signup" element = { < SignUpPage / > } /> 
-                <Route path="/tracker" element={<PeriodTrackerPage />} />
-                <Route path="/consult-gynaec" element={<ConsultGynaecPage />} />
-            </Routes > 
-        </Router>
+    return ( <
+        Router >
+        <
+        Navbar / >
+        <
+        Routes >
+        <
+        Route path = "/"
+        element = { < HomePage / > }
+        />  <
+        Route path = "/login"
+        element = { < LoginPage / > }
+        />  <
+        Route path = "/signup"
+        element = { < SignUpPage / > }
+        />  <
+        Route path = "/tracker"
+        element = { < PeriodTrackerPage / > }
+        /> <
+        Route path = "/consult-gynaec"
+        element = { < ConsultGynaecPage / > }
+        /> <
+        Route path = "/dashboard"
+        element = { < Dashboard / > }
+        /> < /
+        Routes > <
+        /Router>
     );
 }
 

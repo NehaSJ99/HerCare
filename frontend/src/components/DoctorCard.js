@@ -1,6 +1,15 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const DoctorCard = ({ doctor }) => {
+    const navigate = useNavigate();
+
+    // Function to handle "Consult Over Call" button click
+    const handleConsultOverCall = () => {
+        const roomCode = `room-${doctor.id}`; // Use doctor ID or any unique identifier as the room code
+        navigate(`/video-call/${roomCode}`);  // Redirect to the video call page
+    };
+
     return (
         <div className="max-w-sm rounded overflow-hidden shadow-lg bg-white">
             <img className="w-full h-48 object-cover" src={doctor.photo} alt={doctor.name} />
@@ -14,7 +23,11 @@ const DoctorCard = ({ doctor }) => {
                 </div>
             </div>
             <div className="px-6 pt-4 pb-2 flex space-x-4">
-                <button className="bg-pink-500 text-white py-2 px-4 rounded-md">Consult Over Call</button>
+                <button
+                    onClick={handleConsultOverCall} // Trigger video call page
+                    className="bg-pink-500 text-white py-2 px-4 rounded-md">
+                    Consult Over Call
+                </button>
                 <button className="bg-purple-500 text-white py-2 px-4 rounded-md">Schedule Appointment</button>
                 <button className="bg-blue-500 text-white py-2 px-4 rounded-md">Chat</button>
             </div>

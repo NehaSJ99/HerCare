@@ -8,6 +8,7 @@ import PeriodTrackerPage from "./pages/PeriodTrackerPage";
 import ConsultGynaecPage from "./pages/ConsultGynaecPage";
 import Dashboard from "./pages/Dashboard";
 import './styles/tailwind.css';
+import VideoCallPage from "./pages/VideoCallPage";
 
 
 function App() {
@@ -35,9 +36,11 @@ function App() {
         /> <
         Route path = "/dashboard"
         element = { < Dashboard / > }
-        /> < /
-        Routes > <
-        /Router>
+        /> < 
+        Route path="/video-call/:roomCode" 
+        element={<VideoCallPage />} /> {/* Video Call Route */}
+        </Routes > 
+        </Router>
     );
 }
 

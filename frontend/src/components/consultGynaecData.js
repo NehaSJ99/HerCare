@@ -2,7 +2,7 @@ const doctors = [{
         id: 1,
         name: 'Dr. Emily Roberts',
         specialty: 'Obstetrics & Gynaecology',
-        photo: '../styles/assets/Images/1.jpg',
+        photo: 'frontend/src/styles/assets/Images/1.jpg',
         reviews: 4.5,
         location: 'New York, NY'
     },

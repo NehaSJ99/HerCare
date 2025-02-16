@@ -35,4 +35,4 @@ const PeriodTrackerPage = () => {
   );
 };
 
-export default PeriodTrackerPage; 
+export default PeriodTrackerPage;

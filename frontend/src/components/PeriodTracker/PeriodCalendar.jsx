@@ -107,7 +107,7 @@ const PeriodCalendar = ({ periodDataList = [], predictions }) => {
   };
 
   return (
-    <div className="bg-white p-8 rounded-lg shadow-xl max-w-md mx-auto space-y-6 border-2 border-gray-300 mt-4">
+    <div className="bg-white p-8 rounded-lg shadow-xl max-w-md mx-auto space-y-6 border-2 border-gray-300">
       <h2 className="text-2xl font-semibold text-center text-pink-600 mt-4">Period Calendar</h2>
       <Calendar
         onChange={setValue}
@@ -115,7 +115,7 @@ const PeriodCalendar = ({ periodDataList = [], predictions }) => {
         tileContent={tileContent}
         className="rounded-lg border-2 border-pink-400 shadow-lg hover:shadow-xl transition-shadow duration-300 bg-pink-100"
       />
-      <div className="text-center text-gray-500 text-sm mt-6">
+      <div className="text-center text-gray-500 text-sm">
         <p>Track your menstrual cycle, ovulation, and fertile windows easily!</p>
       </div>
     </div>

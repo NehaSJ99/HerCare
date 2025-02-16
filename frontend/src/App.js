@@ -9,7 +9,7 @@ import ConsultGynaecPage from "./pages/ConsultGynaecPage";
 import Dashboard from "./pages/Dashboard";
 import './styles/tailwind.css';
 import VideoCallPage from "./pages/VideoCallPage";
-
+import Pharmacy from "./pages/Pharmacy";
 
 function App() {
     return ( <
@@ -21,13 +21,13 @@ function App() {
         <
         Route path = "/"
         element = { < HomePage / > }
-        />  <
+        /> <
         Route path = "/login"
         element = { < LoginPage / > }
-        />  <
+        /> <
         Route path = "/signup"
         element = { < SignUpPage / > }
-        />  <
+        /> <
         Route path = "/tracker"
         element = { < PeriodTrackerPage / > }
         /> <
@@ -36,11 +36,15 @@ function App() {
         /> <
         Route path = "/dashboard"
         element = { < Dashboard / > }
-        /> < 
-        Route path="/video-call/:roomCode" 
-        element={<VideoCallPage />} /> {/* Video Call Route */}
-        </Routes > 
-        </Router>
+        /> <
+        Route path = "/video-call/:roomCode"
+        element = { < VideoCallPage / > }
+        /> <
+        Route path = "/pharmacy"
+        element = { < Pharmacy / > }
+        /> <
+        /Routes> <
+        /Router>
     );
 }
 

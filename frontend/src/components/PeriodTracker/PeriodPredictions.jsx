@@ -1,6 +1,6 @@
 import React from 'react';
 
-const PeriodPredictions = ({ predictions, onClose }) => {
+const PeriodPredictions = ({ predictions }) => {
   if (!predictions) return null;
 
   const {
@@ -11,17 +11,9 @@ const PeriodPredictions = ({ predictions, onClose }) => {
   } = predictions;
 
   return (
-    <div className="fixed inset-0 flex justify-center items-center bg-gray-800 bg-opacity-50 z-50">
-      <div className="w-full max-w-3xl bg-gradient-to-r from-indigo-100 via-purple-100 to-pink-100 rounded-xl shadow-xl">
-        <div className="bg-white p-6 rounded-lg shadow-lg relative">
-          {/* Close Button */}
-          <button
-            onClick={onClose}
-            className="absolute top-2 right-2 text-lg font-bold text-gray-600 hover:text-gray-900"
-          >
-            ×
-          </button>
-
+    <div className="flex items-center justify-center min-h-screen">
+      <div className="mt-8 p-6 bg-gradient-to-r from-indigo-100 via-purple-100 to-pink-100 rounded-xl shadow-xl max-w-3xl mx-auto">
+        <div className="bg-white p-6 rounded-lg shadow-lg">
           <h2 className="text-2xl font-semibold text-gray-800 mb-4">Predictions</h2>
           <div className="space-y-4">
             <div className="flex justify-between">
@@ -34,9 +26,7 @@ const PeriodPredictions = ({ predictions, onClose }) => {
             </div>
             <div className="flex justify-between">
               <span className="font-medium text-gray-600">Fertile Window:</span>
-              <span className="text-lg font-bold text-indigo-600">
-                {fertileWindowStart} - {fertileWindowEnd}
-              </span>
+              <span className="text-lg font-bold text-indigo-600">{fertileWindowStart} - {fertileWindowEnd}</span>
             </div>
           </div>
         </div>
@@ -46,4 +36,3 @@ const PeriodPredictions = ({ predictions, onClose }) => {
 };
 
 export default PeriodPredictions;
-

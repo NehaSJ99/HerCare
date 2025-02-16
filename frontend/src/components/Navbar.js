@@ -22,11 +22,10 @@ const Navbar = () => {
         div className = "hidden md:flex items-center space-x-6" > {
             [
                 { to: "/", text: "Home" },
-                { to: "#about-us", text: "About Us" },
                 { to: "/tracker", text: "Cycle Tracker" },
                 { to: "/ai-health", text: "AI Health Guide" },
                 { to: "/consult-gynaec", text: "Consult a Gynaecologist" },
-                { to: "/nearest-pharmacy", text: "Find Pharmacy Nearby" },
+                { to: "/pharmacy", text: "Find Pharmacy Nearby" },
                 { to: "/nearest-gynaec", text: "Find Gynaecologist Nearby" },
             ].map((link) => ( <
                 Link key = { link.to }
@@ -56,7 +55,7 @@ const Navbar = () => {
                         { to: "/tracker", text: "Cycle Tracker" },
                         { to: "/ai-health", text: "AI Health Guide" },
                         { to: "/consult-gynaec", text: "Consult a Gynaecologist" },
-                        { to: "/nearest-pharmacy", text: "Find Pharmacy Nearby" },
+                        { to: "/pharmacy", text: "Find Pharmacy Nearby" },
                         { to: "/nearest-gynaec", text: "Find Gynaecologist Nearby" },
                     ].map((link) => ( <
                         Link key = { link.to }

@@ -3,6 +3,7 @@ const cors = require('cors');
 
 const userRoutes = require('./routes/userRoutes');
 const periodRoutes = require('./routes/periodRoutes');
+const doctorRoutes = require('./routes/doctorRoutes');
 
 const app = express();
 
@@ -13,5 +14,5 @@ app.use(express.json());
 // Routes
 app.use('/api/users', userRoutes);
 app.use('/api/periods', periodRoutes);
-
+app.use('/api/doctors', doctorRoutes);
 module.exports = app;

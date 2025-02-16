@@ -1,70 +1,35 @@
-# Getting Started with Create React App
+HerCare AI
+HerCare AI is an advanced AI-powered platform designed to support women in managing their menstrual health and overall well-being. The platform provides cycle tracking, online gynecologist consultations, AI-based period care recommendations, and a nearby pharmacy locator, offering a complete solution for personalized healthcare.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Features
+Cycle Flow & Period Tracking
+Stay informed about your menstrual cycle with AI-powered tracking. Get real-time insights into your cycle phases—Menstrual, Ovulation, and Luteal phases—to manage symptoms, fertility, and overall health.
 
-## Available Scripts
+AI-Based Period Care Support
+A virtual assistant provides personalized care recommendations based on symptoms and cycle phase. Whether experiencing cramps, irregular flow, or PMS, HerCare AI offers science-backed suggestions for better health management.
 
-In the project directory, you can run:
+Nearby Pharmacy Locator
+Find the nearest pharmacy with real-time stock availability and directions to get the medications or period essentials needed.
 
-### `npm start`
+Online AI Support
+Chat with HerCare AI, a 24/7 virtual menstrual health assistant, for accurate, research-backed answers to period-related questions.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Online Gynecologist Consultation
+Book virtual gynecologist consultations directly through the platform. Get professional guidance on concerns like PCOS, irregular cycles, fertility, and reproductive health from certified gynecologists.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Menstrual Health & Wellness Tips
+Access educational articles, nutritional guidance, and self-care routines tailored to different phases of the menstrual cycle. Learn about period myths, common disorders like endometriosis and PCOS, and how to improve menstrual well-being.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Why Choose HerCare AI?
+Personalized AI-powered care
+Instant gynecologist access
+Nearby pharmacy search
+24/7 AI-based menstrual health support
+User-friendly and privacy-focused
+Technology Stack
+Frontend
+React.js
+Streamlit (for AI-based care recommendations)
+Backend
+Express.js
+Node.js

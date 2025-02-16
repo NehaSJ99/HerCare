@@ -11,28 +11,28 @@ const blogPosts = [
     title: "Understanding Your Menstrual Cycle",
     excerpt:
       "Learn about the phases of your cycle and how to better track your well-being.",
-    link: "/blog/1",
+    link: "https://www.betterhealth.vic.gov.au/health/conditionsandtreatments/menstrual-cycle",
   },
   {
     id: 2,
     title: "Best Foods to Eat During Your Period",
     excerpt:
       "Discover nutrient-rich foods that can help reduce discomfort and boost energy.",
-    link: "/blog/2",
+    link: "https://www.medicalnewstoday.com/articles/what-to-eat-on-your-period",
   },
   {
     id: 3,
     title: "Managing Cramps: Tips & Remedies",
     excerpt:
       "Find out how to soothe period pain through natural remedies and helpful habits.",
-    link: "/blog/3",
+    link: "https://www.mayoclinic.org/diseases-conditions/menstrual-cramps/diagnosis-treatment/drc-20374944",
   },
   {
     id: 4,
     title: "Tracking Your Cycle with Technology",
     excerpt:
       "Explore the top period tracking apps and gadgets for a more precise experience.",
-    link: "/blog/4",
+    link: "https://pmc.ncbi.nlm.nih.gov/articles/PMC10905339/",
   },
 ];
 
@@ -92,7 +92,7 @@ const Dashboard = () => {
         {/** Quick Tools / Shortcuts */}
         <section className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <Link
-            to="/period-tracker"
+            to="/tracker"
             className="bg-white shadow hover:shadow-lg transition-shadow rounded-xl p-6 flex flex-col items-center text-center"
           >
             <div className="h-16 w-16 bg-pink-500 rounded-full mb-4 flex items-center justify-center text-white">
@@ -107,7 +107,7 @@ const Dashboard = () => {
           </Link>
 
           <Link
-            to="/wellness"
+            to="https://www.thewomens.org.au/health-information/periods/healthy-periods"
             className="bg-white shadow hover:shadow-lg transition-shadow rounded-xl p-6 flex flex-col items-center text-center"
           >
             <div className="h-16 w-16 bg-purple-500 rounded-full mb-4 flex items-center justify-center text-white">
@@ -122,7 +122,7 @@ const Dashboard = () => {
           </Link>
 
           <Link
-            to="/resources"
+            to="https://hercareai.streamlit.app/"
             className="bg-white shadow hover:shadow-lg transition-shadow rounded-xl p-6 flex flex-col items-center text-center"
           >
             <div className="h-16 w-16 bg-pink-600 rounded-full mb-4 flex items-center justify-center text-white">

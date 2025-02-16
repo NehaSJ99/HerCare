@@ -1,7 +1,3 @@
-Here's your **README.md** file:  
-
----
-
 # **HerCare AI**  
 
 HerCare AI is an AI-powered platform designed to support women in managing their menstrual health. The platform provides cycle tracking, online gynecologist consultations, AI-based period care recommendations, and a nearby pharmacy locator, offering a complete solution for personalized healthcare.  

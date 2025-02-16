@@ -10,6 +10,10 @@ const DoctorCard = ({ doctor }) => {
         navigate(`/video-call/${roomCode}`);  // Redirect to the video call page
     };
 
+    const handleScheduleAppointment = () => {
+        navigate('/schedule-appointment', { state: { doctor } });
+    };
+
     return (
         <div className="max-w-sm rounded overflow-hidden shadow-lg bg-white">
             <img className="w-full h-48 object-cover" src={doctor.photo} alt={doctor.name} />
@@ -28,7 +32,12 @@ const DoctorCard = ({ doctor }) => {
                     className="bg-pink-500 text-white py-2 px-4 rounded-md">
                     Consult Over Call
                 </button>
-                <button className="bg-purple-500 text-white py-2 px-4 rounded-md">Schedule Appointment</button>
+                <button 
+                    className="bg-purple-500 text-white py-2 px-4 rounded-md"
+                    onClick={handleScheduleAppointment}
+                >
+                    Schedule Appointment
+                </button>
                 <button className="bg-blue-500 text-white py-2 px-4 rounded-md">Chat</button>
             </div>
         </div>

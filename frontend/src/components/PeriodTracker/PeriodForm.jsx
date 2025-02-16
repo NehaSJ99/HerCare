@@ -35,7 +35,7 @@ const PeriodForm = ({ onDataLogged }) => {
   return (
     <form
       onSubmit={handleSubmit}
-      className="bg-white p-6 rounded-lg shadow-lg max-w-md mx-auto space-y-6 mt-10"
+      className="bg-white p-6 rounded-lg shadow-lg max-w-md mx-auto space-y-6 mt-16 border-2 border-pink-500"
     >
       <h2 className="text-2xl font-semibold text-pink-500 text-center">Log Your Period</h2>
 

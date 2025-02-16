@@ -10,6 +10,7 @@ import Dashboard from "./pages/Dashboard";
 import VideoCallPage from "./pages/VideoCallPage";
 import Pharmacy from "./pages/Pharmacy";
 import DoctorLogin from './pages/DoctorLogin';
+import ScheduleAppointment from "./pages/ScheduleAppointment";
 
 import './styles/tailwind.css';
 
@@ -47,7 +48,9 @@ function App() {
         /> <
         Route path = "/doctor_login"
         element = { < DoctorLogin / > }
-        /> < /
+        /> 
+        <Route path="/schedule-appointment" element={<ScheduleAppointment />} />
+        < /
         Routes > <
         /Router>
     );

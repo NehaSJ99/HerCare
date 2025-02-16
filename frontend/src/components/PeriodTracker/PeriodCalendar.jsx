@@ -107,8 +107,8 @@ const PeriodCalendar = ({ periodDataList = [], predictions }) => {
   };
 
   return (
-    <div className="bg-white p-8 rounded-lg shadow-xl max-w-md mx-auto space-y-6 border-2 border-gray-300">
-      <h2 className="text-2xl font-semibold text-center text-pink-600 mt-4">Period Calendar</h2>
+    <div className="bg-white p-8 rounded-lg shadow-xl max-w-md mx-auto space-y-6 border-2 border-gray-300 mt-16 border-2 border-pink-500">
+      <h2 className="text-2xl font-semibold text-center text-pink-600 text-center">Period Calendar</h2>
       <Calendar
         onChange={setValue}
         value={value}

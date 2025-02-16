@@ -1,7 +1,8 @@
 import React from "react";
 import { Sparkles, ArrowRight, MapPin, Calendar } from "lucide-react";
 import { Link } from "react-router-dom";
-import HeroImage from "../Images/feminine.png";
+import HeroImage from "../styles/assets/Images/feminine.png";
+
 
 const Hero = () => {
     return ( <

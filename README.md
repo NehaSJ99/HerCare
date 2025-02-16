@@ -10,7 +10,8 @@ HerCare AI is a platform designed to support women in managing their menstrual h
 
 ### **AI-Based Period Care Support**  
 - Personalized recommendations based on symptoms and cycle phase  
-- Science-backed solutions for cramps, irregular flow, PMS, and more  
+- Science-backed solutions for cramps, irregular flow, PMS, and more
+- [Visit HerCare AI Chatbot](https://hercareai.streamlit.app/)
 
 ### **Nearby Pharmacy Locator**  
 - Find the nearest pharmacy with real-time stock availability  
@@ -47,7 +48,8 @@ HerCare AI is a platform designed to support women in managing their menstrual h
 - Express.js  
 - Node.js  
 - LangChain for AI-powered recommendations  
-- Fireworks AI for chatbot responses  
+- Python
+- Gemini
 
 ---
 

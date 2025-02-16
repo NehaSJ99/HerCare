@@ -5,7 +5,7 @@ HerCare AI is a platform designed to support women in managing their menstrual h
 ## **Features**  
 
 ### **Cycle Flow & Period Tracking**  
-- AI-powered tracking for menstrual phases (Menstrual, Ovulation, and Luteal)  
+- Tracking for menstrual phases (Menstrual, Ovulation, and Luteal)  
 - Real-time insights for symptom management and fertility tracking  
 
 ### **AI-Based Period Care Support**  
@@ -16,10 +16,6 @@ HerCare AI is a platform designed to support women in managing their menstrual h
 ### **Nearby Pharmacy Locator**  
 - Find the nearest pharmacy with real-time stock availability  
 - Directions to pharmacies for quick access to period essentials  
-
-### **Online AI Support**  
-- 24/7 AI chatbot providing menstrual health assistance  
-- Research-backed answers for period-related questions  
 
 ### **Online Gynecologist Consultation**  
 - Virtual gynecologist appointments for expert medical advice  

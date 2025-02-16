@@ -14,7 +14,7 @@ const Hero = () => {
         <
         Sparkles className = "h-4 w-4 mr-2" / >
         <
-        span > AI - Powered Health Companion < /span> < /
+        span > From Cramps to Care< /span> < /
         div >
 
         <

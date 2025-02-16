@@ -1,8 +1,10 @@
+const doctorImages = require.context('../styles/assets/Images', true);
+
 const doctors = [{
         id: 1,
         name: 'Dr. Emily Roberts',
         specialty: 'Obstetrics & Gynaecology',
-        photo: 'frontend/src/styles/assets/Images/1.jpg',
+        photo: doctorImages('./1.jpg'),
         reviews: 4.5,
         location: 'New York, NY'
     },
@@ -10,7 +12,7 @@ const doctors = [{
         id: 2,
         name: 'Dr. Sarah Johnson',
         specialty: 'Gynaecology',
-        photo: '../styles/assets/Images/2.jpg',
+        photo: doctorImages('./2.jpg'),
         reviews: 4.7,
         location: 'Los Angeles, CA'
     },
@@ -18,7 +20,7 @@ const doctors = [{
         id: 3,
         name: 'Dr. Linda Smith',
         specialty: 'Obstetrics & Gynaecology',
-        photo: '../styles/assets/Images/3.jpg',
+        photo: doctorImages('./3.jpg'),
         reviews: 4.8,
         location: 'Chicago, IL'
     },
@@ -26,7 +28,7 @@ const doctors = [{
         id: 4,
         name: 'Dr. Karen Miller',
         specialty: 'Gynaecology',
-        photo: '../styles/assets/Images/4.jpg',
+        photo: doctorImages('./4.jpg'),
         reviews: 4.6,
         location: 'Houston, TX'
     },
@@ -34,7 +36,7 @@ const doctors = [{
         id: 5,
         name: 'Dr. Natalie Evans',
         specialty: 'Obstetrics & Gynaecology',
-        photo: '../styles/assets/Images/5.jpg',
+        photo: doctorImages('./1.jpg'),
         reviews: 4.9,
         location: 'San Francisco, CA'
     },
@@ -42,7 +44,7 @@ const doctors = [{
         id: 6,
         name: 'Dr. Jessica Parker',
         specialty: 'Gynaecology',
-        photo: '../styles/assets/Images/6.jpg',
+        photo: doctorImages('./2.jpg'),
         reviews: 4.3,
         location: 'Miami, FL'
     }

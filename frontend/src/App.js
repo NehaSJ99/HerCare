@@ -11,6 +11,9 @@ import VideoCallPage from "./pages/VideoCallPage";
 import Pharmacy from "./pages/Pharmacy";
 import DoctorLogin from './pages/DoctorLogin';
 import ScheduleAppointment from "./pages/ScheduleAppointment";
+import  DoctorSignup from  './pages/DoctorSignup';
+import  DoctorDashboard from  './pages/DoctorDashboard';
+import DoctorVcPage from "./pages/DoctorVcPage";
 
 import './styles/tailwind.css';
 
@@ -42,12 +45,25 @@ function App() {
         /> <
         Route path = "/video-call/:roomCode"
         element = { < VideoCallPage / > }
-        /> <
+        /> 
+        <
+        Route path = "/doctor-video-call/:roomCode"
+        element = { < DoctorVcPage / > }
+        />
+        <
         Route path = "/pharmacy"
         element = { < Pharmacy / > }
         /> <
         Route path = "/doctor_login"
         element = { < DoctorLogin / > }
+        /> 
+        <
+        Route path = "/doctor_signup"
+        element = { < DoctorSignup / > }
+        /> 
+        <
+        Route path = "/doctor_dashboard"
+        element = { < DoctorDashboard / > }
         /> 
         <Route path="/schedule-appointment" element={<ScheduleAppointment />} />
         < /

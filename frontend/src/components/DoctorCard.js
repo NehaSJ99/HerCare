@@ -38,7 +38,6 @@ const DoctorCard = ({ doctor }) => {
                 >
                     Schedule Appointment
                 </button>
-                <button className="bg-blue-500 text-white py-2 px-4 rounded-md">Chat</button>
             </div>
         </div>
     );

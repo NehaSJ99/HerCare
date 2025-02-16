@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useParams, useNavigate } from 'react-router-dom'; // Changed useHistory to useNavigate
 
-const VideoCallPage = () => {
+const DoctorVCPage = () => {
     const { roomCode } = useParams(); // Get the roomCode from the URL
     const navigate = useNavigate(); // Hook to handle navigation
     const [isCallStarted, setIsCallStarted] = useState(false);
@@ -143,20 +143,21 @@ const VideoCallPage = () => {
                 <h1 className="text-xl font-semibold mb-4">Video Call - Room: {roomCode}</h1>
 
                 <div className="flex justify-between mb-4">
+                   
+                    <div className="w-1/2 ml-2">
+                        <h2 className="text-center">Patient's Video</h2>
+                        <video
+                            ref={remoteVideoRef}
+                            autoPlay
+                            className="w-full rounded-lg shadow-md"
+                        ></video>
+                    </div>
                     <div className="w-1/2 ml-2">
                         <h2 className="text-center">Your Video</h2>
                         <video
                             ref={localVideoRef}
                             autoPlay
                             muted
-                            className="w-full rounded-lg shadow-md"
-                        ></video>
-                    </div>
-                    <div className="w-1/2 ml-2">
-                        <h2 className="text-center">Doctor's Video</h2>
-                        <video
-                            ref={remoteVideoRef}
-                            autoPlay
                             className="w-full rounded-lg shadow-md"
                         ></video>
                     </div>
@@ -199,4 +200,4 @@ const VideoCallPage = () => {
     );
 };
 
-export default VideoCallPage;
+export default DoctorVCPage;

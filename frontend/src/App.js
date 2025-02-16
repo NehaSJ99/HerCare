@@ -6,6 +6,7 @@ import LoginPage from "./pages/LoginPage";
 import SignUpPage from "./pages/SignUpPage";
 import PeriodTrackerPage from "./pages/PeriodTrackerPage";
 import ConsultGynaecPage from "./pages/ConsultGynaecPage";
+import VideoCallPage from './pages/VideoCallPage';
 import './styles/tailwind.css';
 
 
@@ -19,6 +20,7 @@ function App() {
                 <Route path = "/signup" element = { < SignUpPage / > } /> 
                 <Route path="/tracker" element={<PeriodTrackerPage />} />
                 <Route path="/consult-gynaec" element={<ConsultGynaecPage />} />
+                <Route path="/video-call/:roomCode" element={<VideoCallPage />} /> {/* Video Call Route */}
             </Routes > 
         </Router>
     );

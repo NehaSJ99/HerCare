@@ -7,9 +7,11 @@ import SignUpPage from "./pages/SignUpPage";
 import PeriodTrackerPage from "./pages/PeriodTrackerPage";
 import ConsultGynaecPage from "./pages/ConsultGynaecPage";
 import Dashboard from "./pages/Dashboard";
-import './styles/tailwind.css';
 import VideoCallPage from "./pages/VideoCallPage";
 import Pharmacy from "./pages/Pharmacy";
+import DoctorLogin from './pages/DoctorLogin';
+
+import './styles/tailwind.css';
 
 function App() {
     return ( <
@@ -43,7 +45,10 @@ function App() {
         Route path = "/pharmacy"
         element = { < Pharmacy / > }
         /> <
-        /Routes> <
+        Route path = "/doctor_login"
+        element = { < DoctorLogin / > }
+        /> < /
+        Routes > <
         /Router>
     );
 }

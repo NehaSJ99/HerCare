@@ -3,7 +3,6 @@ import { Sparkles, ArrowRight, MapPin, Calendar } from "lucide-react";
 import { Link } from "react-router-dom";
 import HeroImage from "../styles/assets/Images/feminine.png";
 
-
 const Hero = () => {
     return ( <
         div className = "pt-16 bg-gradient-to-r from-pink-50 via-purple-50 to-white" >
@@ -19,7 +18,7 @@ const Hero = () => {
         div >
 
         <
-        h1 className = "text-5xl md:text-6xl font-bold" >
+        h1 className = "text-5xl md:text-6xl font-bold text-gray-900" >
         Take Control of < span className = "block bg-gradient-to-r from-pink-500 to-purple-500 bg-clip-text text-transparent" > Your Health < /span> < /
         h1 >
 
@@ -39,6 +38,10 @@ const Hero = () => {
         Link to = "/signup"
         className = "px-6 py-3 text-pink-500 border border-pink-500 rounded-lg hover:bg-pink-50 transition-all hover:scale-105" >
         Sign Up <
+        /Link> <
+        Link to = "/doctor_login"
+        className = "px-6 py-3 text-purple-500 border border-purple-500 rounded-lg hover:bg-purple-50 transition-all hover:scale-105" >
+        Doctor Login <
         /Link> < /
         div > <
         /div>
@@ -59,19 +62,13 @@ const Hero = () => {
         <
         div className = "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" >
         <
-        h2 className = "text-3xl font-bold text-center" >
+        h2 className = "text-3xl font-bold text-center text-gray-900" >
         Everything You Need
         for Your < span className = "bg-gradient-to-r from-pink-500 to-purple-500 bg-clip-text text-transparent ml-2" > Health Journey < /span> < /
         h2 > <
-        /div> < /
-        div >
-
-        { /* Card Section */ } <
+        /div> <
         div id = "about-us"
         className = "py-12 bg-white" >
-        <
-        div className = "py-12 bg-white"
-        id = "features" >
         <
         div className = "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" >
         <
@@ -84,9 +81,7 @@ const Hero = () => {
         <
         /div> <
         h3 className = "text-xl font-semibold text-pink-500 mb-2" > Period Cycle Tracker < /h3> <
-        p className = "text-gray-600 text-center" >
-        Track your monthly periods and ignore the hassle of remembering. <
-        /p> < /
+        p className = "text-gray-600 text-center" > Track your monthly periods and ignore the hassle of remembering. < /p> < /
         div >
 
         { /* Card 2: Consultation with Gynaecologist */ } <
@@ -98,10 +93,8 @@ const Hero = () => {
         <
         /div> <
         h3 className = "text-xl font-semibold text-purple-500 mb-2" > Consultation with Gynaecologist < /h3> <
-        p className = "text-gray-600 text-center" >
-        Schedule virtual consultations with expert gynecologists
-        for personalized advice. <
-        /p> < /
+        p className = "text-gray-600 text-center" > Schedule virtual consultations with expert gynecologists
+        for personalized advice. < /p> < /
         div >
 
         { /* Card 3: Search Nearest Pharmacy */ } <
@@ -113,32 +106,22 @@ const Hero = () => {
         <
         /div> <
         h3 className = "text-xl font-semibold text-pink-600 mb-2" > Search Nearest Pharmacy < /h3> <
-        p className = "text-gray-600 text-center" >
-        Find pharmacies nearby to easily access your medication and health products. <
-        /p> < /
+        p className = "text-gray-600 text-center" > Find pharmacies nearby to easily access your medication and health products. < /p> < /
         div > <
         /div> < /
         div > <
         /div> < /
         div >
 
-
         { /* CTA Section */ } <
         div className = "bg-gradient-to-r from-pink-500 to-purple-500 py-20" >
         <
         div className = "max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8" >
         <
-        h2 className = "text-3xl font-bold text-white mb-6" >
-        Start Your Health Journey Today <
-        /h2> <
+        h2 className = "text-3xl font-bold text-white mb-6" > Start Your Health Journey Today < /h2> <
         p className = "text-lg text-white/90 mb-8" >
         Join thousands of women who have taken control of their menstrual health with HerCare. <
-        /p> <
-        button className = "group px-8 py-4 bg-white text-pink-500 rounded-lg hover:bg-pink-50 transition-all hover:scale-105 text-lg font-medium" >
-        Create Free Account <
-        ArrowRight className = "ml-2 h-5 w-5 inline-block group-hover:translate-x-1 transition-transform" / >
-        <
-        /button> < /
+        /p>  < /
         div > <
         /div> < /
         div >
